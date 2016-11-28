@@ -33,6 +33,7 @@ export class LogingScreenComponent implements OnInit {
     this.postService.userLogin(loginUser.username, loginUser.password)
     .then(result => this.finishLogin(result))
     .catch(error => this.catchError(error));
+    window.location.reload();
   }
 
   finishLogin(temp : any){
